@@ -51,8 +51,8 @@ function bd_dwz($longUrl) {
  $answers = $_POST;
  $formUrl = "http://www.jotform.co/form/41522084715854"; // This is the form URL
  $homePage = "http://xybk.net84.net";
- $name = "?name=".urlencode($answers[name]);
- $mobile = "&mobile=".urlencode($answers[mobile]);
+ $name = "?r_name=".urlencode($answers[name]);
+ $mobile = "&r_mobile=".urlencode($answers[mobile]);
  
  $myFormUrl = $homePage.$name.$mobile;
  
