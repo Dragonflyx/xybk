@@ -65,114 +65,105 @@ function bd_dwz($longUrl) {
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <head>
+    <title>
+      Thank you page
+    </title>
+    <meta charset="utf-8">
+    <link href="./css/myTheme.css" rel="stylesheet" type="text/css">
+    <script src="http://libs.baidu.com/swfobject/2.2/swfobject.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var copyCon = "<?php echo $myShortFormUrl?>";
+      var flashvars = {
+        content: encodeURIComponent(copyCon),
+        uri: './images/flash_copy_btn.png'
+      };
+      var params = {
+        wmode: "transparent",
+        allowScriptAccess: "always"
+      };
+      swfobject.embedSWF("./js/clipboard.swf", "forLoadSwf", "52", "25", "9.0.0", null, flashvars, params);
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
-
-<head>
-
-<title>Thank you page</title>
-<meta charset="utf-8">
-
-<style>
-
-  body{background:url(./images/style4_2_bg.gif) #363535 top repeat-x;}
-  #forLoadSwf {vertical-align: sub;}
-  .shareButtons{
-	width:220px; 
-	margin:0 auto;
-  }
-
-</style>
-
-<script type="text/javascript">
-    function jsCopy(){
-		var url = "<?php echo $myShortFormUrl?>";
-		window.clipboardData.setData("Text",url);
-		        
-        alert("已复制好，可贴粘。");
-    }
-	
-</script>
-
-<script type="text/javascript">
-	//***
-	function getData(){
-		var url = "<?php echo $myShortFormUrl?>";
-		return url;
-	};
-	function copySuccess(){
-		alert("复制成功！");
-	};
-</script>
-
-
-<script src="http://libs.baidu.com/swfobject/2.2/swfobject.js" type="text/javascript"></script>
-<script type="text/javascript">
-	var copyCon = "<?php echo $myShortFormUrl?>";
-	var flashvars = {
-		content: encodeURIComponent(copyCon),
-		uri: './images/flash_copy_btn.png'
-	};
-	var params = {
-		wmode: "transparent",
-		allowScriptAccess: "always"
-	};
-	swfobject.embedSWF("./js/clipboard.swf", "forLoadSwf", "52", "25", "9.0.0", null, flashvars, params);
-
-	function copySuccess(){
-		//flash回调
-		alert("复制成功！");
-	}
-</script>
-
-</head>
-
-<body>
-<p>&nbsp;</p>
-<div style="text-align: center;">
-<h1><span style="color: #ffffff;">感谢您的提交！</span></h1>
-</div>
-<p style="text-align: center;"><span style="font-size: small; color: #ffffff;">继续推荐小伙伴吧--&gt;</span></p>
-<div style="text-align: center;">
-	<a href="<?php echo $myShortFormUrl?>"><span id="shortUrl" style="color: #ffffff;"><?php echo $myShortFormUrl?></span></a>
-	&nbsp;
-	<span id="forLoadSwf"></span>
-	
-</div>
-
-<div class="shareButtons">
-<br/>
-<div class="bdsharebuttonbox" data-tag="share_1">
-	<a title="一键分享" class="bds_mshare" data-cmd="mshare"></a>
-	<a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
-	<a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
-	<a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
-	<a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a>
-	<a title="分享到百度" href="#" class="bds_baidu" data-cmd="baidu"></a>
-	<a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a>
-	<a class="bds_more" data-cmd="more">更多</a>
-</div>
-<script>
-	window._bd_share_config = {
-		common : {
-			bdText : '快来登记申请交行信用卡吧，有手机话费充值可以拿哟~ ',	
-			bdDesc : '申请交行信用卡，赠手机话费',	
-			bdUrl : '<?php echo $myShortFormUrl?>'
-		},
-		share : [{
-			"bdSize" : 16
-		}],
-		slide : [{	   
-			bdImg : 0,
-			bdPos : "right",
-			bdTop : 100
-		}]
-	}
-	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-</div>
-
-</body>
+      function copySuccess() {
+        //flash callback
+        alert("复制成功！");
+      }
+    </script>
+  </head>
+  
+  <body>
+    <div id="page" class="form-all">
+      <p>
+        &nbsp;
+      </p>
+      <div style="text-align: center;">
+        <h1>
+          <span style="color: #ffffff;">
+            感谢您的提交！
+          </span>
+        </h1>
+      </div>
+      <p style="text-align: center;">
+        <span style="font-size: small; color: #ffffff;">
+          继续推荐小伙伴吧--&gt;
+        </span>
+      </p>
+      <div style="text-align: center;">
+        <a href="<?php echo $myShortFormUrl?>">
+          <span id="shortUrl" style="color: #ffffff;">
+            <?php echo $myShortFormUrl?>
+          </span>
+        </a>
+        &nbsp;
+        <span id="forLoadSwf">
+        </span>
+      </div>
+      <div class="shareButtons">
+        <br/>
+        <div class="bdsharebuttonbox" data-tag="share_1">
+          <a title="一键分享" class="bds_mshare" data-cmd="mshare">
+          </a>
+          <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina">
+          </a>
+          <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin">
+          </a>
+          <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone">
+          </a>
+          <a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq">
+          </a>
+          <a title="分享到百度" href="#" class="bds_baidu" data-cmd="baidu">
+          </a>
+          <a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren">
+          </a>
+          <a class="bds_more" data-cmd="more">
+            更多
+          </a>
+        </div>
+        <script>
+          window._bd_share_config = {
+            common: {
+              bdText: '快来登记申请交行信用卡吧，有手机话费充值可以拿哟~ ',
+              bdDesc: '申请交行信用卡，赠手机话费',
+              bdUrl: '<?php echo $myShortFormUrl?>'
+            },
+            share: [{
+              "bdSize": 16
+            }],
+            slide: [{
+              bdImg: 0,
+              bdPos: "right",
+              bdTop: 100
+            }]
+          }
+          with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~ ( - new Date() / 36e5)];
+        </script>
+      </div>
+      <?php include 'copyRight.php'; ?>
+    </div>
+  </body>
 
 </html>
 
