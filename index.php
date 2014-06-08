@@ -8,35 +8,37 @@
 	$mobile = urlencode($_GET["r_mobile"]);
 	$myFormUrl = $applyForm."?referrer_name=".$name."&referrer_mobile=".$mobile;
 	
+	$isMobile = false;
+	
 	
 	/*根据文件位置更改路径信息*/
 	require_once './module/Mobile_Detect.php';
 	$detect = new Mobile_Detect;
-	if($detect->isMobile()) {
-		echo "Your are using mobile.";
-	}
-	//所有平板设备
-	if( $detect->isTablet()) {
-		echo "Your are using tablet.";
-	}
-	//是移动但非平板设备
 	if( $detect->isMobile() && !$detect->isTablet()) {
-		echo "Your are using mobile and not tablet.";
-	}
-	//IOS系统
-	if( $detect->isiOS()) {
-		echo "Your are using ios.";
-	}
-	//Android系统
-	if( $detect->isAndroidOS()) {
-		echo "Your are using android.";
-	}
-	//WindowsPhone系统
-	if( $detect->isWindowsPhoneOS()) {
-		echo "Your are using WP.";
+		$isMobile = true;
 	}
 ?>
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>
+      小余办卡
+    </title>
+    <meta content="小余办卡" name="keywords">
+    <meta content="小余办卡" name="description">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="Bookmark" href="favicon.ico">
+    <link href="./css/myTheme.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+    <div id="page" class="form-all">
 
 <?php 
 
@@ -45,3 +47,9 @@
 	else
 		include 'applyForm.php';
 ?>
+
+	<?php include 'copyRight.php'; ?>
+    </div>
+  </body>
+
+</html>
