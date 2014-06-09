@@ -111,7 +111,7 @@ function bd_dwz($longUrl) {
       </div>
       <p style="text-align: center;">
         <span style="font-size: small; color: #ffffff;">
-          继续推荐小伙伴吧--&gt;
+          继续推荐小伙伴，赢取更多话费吧--&gt;
         </span>
       </p>
       <div style="text-align: center;">
