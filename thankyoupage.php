@@ -64,8 +64,8 @@ function bd_dwz($longUrl) {
 
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
   
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -164,7 +164,7 @@ function bd_dwz($longUrl) {
           with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~ ( - new Date() / 36e5)];
         </script>
       </div>
-      <?php include 'copyRight.php'; ?>
+      <footer><?php include 'copyRight.php'; ?></footer>
     </div>
   </body>
 

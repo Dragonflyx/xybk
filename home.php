@@ -35,7 +35,7 @@
 <div id="desc" align="center">
   <div> <br>
   </div>
-  <div id="instruction">
+  <article id="instruction">
     <h3>一点说明</h3>
     <table align="center" width="360" border="0">
       <tr>
@@ -50,7 +50,7 @@
           </div></td>
       </tr>
     </table>
-  </div>
+  </article>
   <div> <br>
     <br>
     <br>
