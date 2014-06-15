@@ -95,9 +95,11 @@ function bd_dwz($longUrl) {
         alert("复制成功！");
       }
     </script>
+	
   </head>
   
   <body>
+	
     <div id="page" class="form-all">
       <p>
         &nbsp;

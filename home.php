@@ -37,12 +37,11 @@
   </div>
   <article id="instruction">
     <h3>一点说明</h3>
-    <table align="center" width="360" border="0">
+    <table align="center" border="0">
       <tr>
         <td><div id="bulletpoint">
-            <li>凡经本人成功申办交通银行信用卡即送<strong>3</strong>元话费</li>
-            <li>凡推荐亲友成功办卡可再获赠<strong>1</strong>元话费</li>
-            <li>推荐的亲友若是大专或以上学历可获赠<span style="font-size: 36px; color:red"><em><strong>5</strong></em></span>元话费</li>
+            <li>凡推荐亲友成功办卡可获赠<strong>3</strong>元话费</li>
+            <li>推荐大专或以上学历亲友成功办卡可获赠<span style="font-size: 36px; color:red"><em><strong>10</strong></em></span>元话费</li>
             <div>
               <p><span class="red floatLeft">*</span><span class="floatRight">成功申办是指经过本人(小余@<strong>13428865961</strong>)成功提交并审核通过和发卡。<br/>
                 人艰不拆，一点小优惠，还请各位多多帮忙^-^</span></p>
@@ -60,13 +59,13 @@
   <hr class="line2">
   <p> <span style="font-size: 15px;">
     <?php if ($isMobile) { ?>
-    <a href="javascript:void( window.open('http://form.jotform.me/form/41565026458457', 'blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
+    <a href="form.php?id=41565026458457">
     <?php } else { ?>
     <a href="#" class="lightbox-41565026458457">
     <?php }?>
-    申请办卡 </a> 　｜　
+    <span>申请办卡</span> </a> 　｜　
     <?php if ($isMobile) { ?>
-    <a href="javascript:void( window.open('http://form.jotform.co/form/41522084715854', 'blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
+    <a href="form.php?id=41522084715854">
     <?php } else { ?>
     <a href="#" class="lightbox-41522084715854">
     <?php }?>
